@@ -1,0 +1,32 @@
+<div class="contain mt-5">
+  <div class="row p-5">
+    <div class="col-lg-2" *ngIf="getMovieDetailsResult.poster_path">
+      <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailsResult.poster_path }}" class="rowimg largeposter"
+        alt="{{getMovieDetailsResult.original_title}}" class="w-100 h-auto">
+    </div>
+    <div class="col-lg-10 mt-5 text-white">
+      <h1 class="my-2 font-bold">{{getMovieDetailsResult.original_title}}</h1>
+      <p class="my-3">{{getMovieDetailsResult.overview}}</p>
+      <a class="btn btn-md" href="https://www.themoviedb.org/video/play?key={{getMovieVideoResult}}" target="_blank">
+        Watch Trailer
+      </a>
+
+      <div class="row mt-4 p-4">
+        <h2 class="text-white">Top Cast</h2>
+        <div class="col-lg-4" *ngFor="let c of getMovieCastResult">
+          <div class="row my-2">
+            <div class="col-lg-2" *ngIf="c.profile_path">
+              <img src="https://image.tmdb.org/t/p/original/{{ c.profile_path }}" class="rowimg largeposter"
+                alt="{{c.original_name}}" class="w-100 h-auto">
+            </div>
+            <div class="col-lg-10">
+              <h3 class="text-white">{{c.original_name}} </h3>
+              <p class="text-white">{{c.character}} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
