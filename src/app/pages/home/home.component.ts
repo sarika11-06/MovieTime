@@ -50,7 +50,6 @@ export class HomeComponent implements OnInit {
 
   bannerData() {
     this.service.bannerApiData().subscribe((result) => {
-      console.log(result, 'bannerresult#');
       this.bannerResult = result.results;
     });
   }
@@ -58,7 +57,6 @@ export class HomeComponent implements OnInit {
   // trendingData
   trendingData() {
     this.service.trendingMovieApiData().subscribe((result) => {
-      console.log(result, 'trendingData#');
       this.trendingMovieResult = result.results;
     });
   }
@@ -67,7 +65,6 @@ export class HomeComponent implements OnInit {
 
   actionMovie() {
     this.service.fetchActionMovies().subscribe((result) => {
-      console.log(result, 'action');
       this.actionMovieresult = result.results;
     });
   }
@@ -76,7 +73,6 @@ export class HomeComponent implements OnInit {
 
   adventureMovie() {
     this.service.fetchAdventureMovies().subscribe((result) => {
-      console.log(result, 'action');
       this.adventureMovieResult = result.results;
     });
   }
@@ -85,7 +81,6 @@ export class HomeComponent implements OnInit {
 
   animationMovie() {
     this.service.fetchAnimationMovies().subscribe((result) => {
-      console.log(result, 'action');
       this.animationMovieResult = result.results;
     });
   }
@@ -94,7 +89,6 @@ export class HomeComponent implements OnInit {
 
   comedyMovie() {
     this.service.fetchComedyMovies().subscribe((result) => {
-      console.log(result, 'action');
       this.comedyMovieResult = result.results;
     });
   }
@@ -103,7 +97,6 @@ export class HomeComponent implements OnInit {
 
   documentaryMovie() {
     this.service.fetchDocumentaryMovies().subscribe((result) => {
-      console.log(result, 'action');
       this.documentaryMovieResult = result.results;
     });
   }
@@ -112,7 +105,6 @@ export class HomeComponent implements OnInit {
 
   sciencefictionMovie() {
     this.service.fetchScienceFictionMovies().subscribe((result) => {
-      console.log(result, 'action');
       this.sciencefictionMovieResult = result.results;
     });
   }
@@ -121,7 +113,6 @@ export class HomeComponent implements OnInit {
 
   thrillerMovie() {
     this.service.fetchThrillerMovies().subscribe((result) => {
-      console.log(result, 'action');
       this.thrillerMovieResult = result.results;
     });
   }
